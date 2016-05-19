@@ -1,4 +1,5 @@
 import React from 'react'
+import Comment from './Comment'
 
 export default React.createClass({
   getDefaultProps(){
@@ -12,13 +13,13 @@ export default React.createClass({
         },
         {
           author_name: "kate robinson",
-          author_img: "./images/janet",
+          author_img: "./images/janet.jpg",
           text: "Integer sit amet nibh et lacus sollicitudin finibus. Nullam lorem metus, hendrerit vel sagittis varius, placerat vitae dui. Etiam nec vestibulum quam. Proin auctor mauris at urna porta ultrices.",
           date: "6 hours ago"
         },
         {
           author_name: "jack black",
-          author_img: "./images/jack",
+          author_img: "./images/jack.jpg",
           text: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam sem eros, mattis vitae elementum id, gravida et tortor. Praesent ultrices sapien ac efficitur laoreet. Vivamus tincidunt dui in risus interdum consequat. Aliquam rhoncus ut eros ac mattis.",
           date: "8 hours ago"
         },
@@ -29,12 +30,11 @@ export default React.createClass({
   render(){
     return (
       <div className="comments__list">
-        {this.props.comments.map(function(i){
-          return
-          <div>
-            <h3 key={i}>{this.props.comments.author_name}</h3>
-            <p key={i}>{this.props.comments.text}</p>
-          </div>
+        {this.props.comments.map(function(comment, i){
+          return <Comment key={i}
+          author_img={comment.author_img}
+          author_name={comment.author_name}
+          text={comment.text} date={comment.date}/>
         })}
       </div>
     )

@@ -1,22 +1,34 @@
 import React from 'react'
-import Counter from './Counter'
+import AddComment from './AddComment'
 
 export default React.createClass({
-  getInitialState(){
-    return {
-      color: 'gray'
-    };
+  componentWillMount(){
+    this.setState({ liked: false, count: this.props.count });
+
   },
-  addLike(){
-    if(this.state.color === 'gray'){
-      this.setState({color: 'blue'});
-    } else {
-      this.setState({color: 'gray'});
-    }
+  onHandleClickLike(e){
+    var like_count =
+      this.state.liked ? 0 : 1;
+      this.setState({ liked: this.state.liked ? false : true, count: like_count })
+      e.preventDefault();
   },
   render(){
     return (
-      <button className={"like__button "+this.state.color}  onClick={this.addLike}>Like</button>
+      <article className="section__like">
+        <section className="article__buttons">
+          <a href="#"
+            className={this.state.liked ? "blue" : "gray"}
+            onClick={this.onHandleClickLike}>Like</a>
+          <AddComment/>
+        </section>
+        <div className='comments__header'>
+          <p className="like_counter">
+            <span>{this.state.count}</span>
+             &nbsp;like(s)
+            <span className="top_comments">top comments</span>
+           </p>
+        </div>
+      </article>
     )
   }
 })

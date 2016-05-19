@@ -3,14 +3,14 @@ import React from 'react'
 export default React.createClass({
   getInitialState(){
     return {
-      color: 'gray'
+      color: 'grayComment'
     };
   },
   addComment(){
-    if(this.state.color === 'gray'){
+    if(this.state.color === 'grayComment'){
       this.setState({color: 'green'});
     } else {
-      this.setState({color: 'gray'});
+      this.setState({color: 'grayComment'});
     }
   },
   render(){
