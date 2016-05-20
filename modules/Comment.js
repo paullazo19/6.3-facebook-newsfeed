@@ -1,9 +1,10 @@
 import React from 'react'
+import Article from './Article'
 
 export default React.createClass({
   render(){
     return (
-      <article>
+      <article className={this.props.id < this.props.showUntil ? "comment__viewable" : "comment__hidden"}>
         <img className="comment__img" src={this.props.author_img}/>
         <div className="comment__content">
           <span>

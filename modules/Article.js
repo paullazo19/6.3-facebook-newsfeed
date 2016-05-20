@@ -34,36 +34,42 @@ export default React.createClass({
     }
   },
   componentWillMount(){
-    this.setState({ showUntil: 2 });
+    this.setState({showUntil: 2})
+
   },
-  onHandleClickShowAll(e){
-    this.setState({ showUntil: comments.length })
+  onHandleClickShowAll(){
+    this.setState({showUntil: this.props.comments.length})
+
   },
   render(){
     return (
       <div>
+
         <article className="article">
           <img className="author__image" src={this.props.author_img}/>
           <div className="article__header">
             <h1 className="author__name">{this.props.author_name}</h1>
             <h4 className="article__date">{this.props.article_date}</h4>
           </div>
+
           <div>
             <p className="article__text">{this.props.article_text}</p>
             <p className="article__footer">{this.props.article_footer}<a className="article__footer--link" href="#">gravida interdum.</a></p>
           </div>
         </article>
+
         <Like count={this.props.count}/>
+
         <section className="comments__section">
-            <div>
-              {this.props.comments.map(function(comment, i){
-                return <Comment key={i}
-                className={this.props.comments.key < this.props.comments.showUntil ? "comment__viewable" : "comment__hidden"}
-                author_img={comment.author_img}
-                author_name={comment.author_name}
-                text={comment.text} date={comment.date}/>
-              })}
-            </div>
+          <div>
+            {this.props.comments.map(function(comment, i){
+              return <Comment key={i} id={i} showUntil={this.state.showUntil}
+              author_img={comment.author_img}
+              author_name={comment.author_name}
+              text={comment.text} date={comment.date}/>
+
+            },this)}
+          </div>
           <button
             className="comments__viewMore"
             onClick={this.onHandleClickShowAll}>View more comments
