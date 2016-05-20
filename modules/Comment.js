@@ -5,9 +5,12 @@ export default React.createClass({
     return (
       <article>
         <img className="comment__img" src={this.props.author_img}/>
-        <h2>{this.props.author_name}</h2>
-        <p>{this.props.text}</p>
-        <p>{this.props.date}</p>
+        <div className="comment__content">
+          <span>
+            <p className="comment__text"><span className="comment__name">{this.props.author_name}</span>{this.props.text}</p>
+          </span>
+          <p className="comment__date">{this.props.date}</p>
+        </div>
       </article>
     )
   }

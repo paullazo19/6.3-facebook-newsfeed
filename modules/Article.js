@@ -14,6 +14,12 @@ export default React.createClass({
 
     }
   },
+  componentWillMount(){
+    this.setState({ showUntil: comments.length === 2});
+  },
+  onHandleClickShowAll(e){
+    this.setState({showUntil: this.comments.length})
+  },
   render(){
     return (
       <div>
@@ -30,7 +36,11 @@ export default React.createClass({
         </article>
         <Like count={this.props.count}/>
         <section className="comments__section">
-          <Comments/>
+          <Comments showUntil={this.state.showUntil}/>
+          <button
+            className="comments__viewMore"
+            onClick={this.onHandleClickShowAll}>View more comments
+          </button>
         </section>
       </div>
     )

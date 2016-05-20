@@ -1,5 +1,6 @@
 import React from 'react'
 import Comment from './Comment'
+import Article from './Article'
 
 export default React.createClass({
   getDefaultProps(){
@@ -28,10 +29,12 @@ export default React.createClass({
     }
   },
   render(){
+    var commentScope = this;
     return (
-      <div className="comments__list">
+      <div>
         {this.props.comments.map(function(comment, i){
           return <Comment key={i}
+          className={commentScope.props.key < commentScope.props.showUntil ? "comment__viewable" : "comment__hidden"}
           author_img={comment.author_img}
           author_name={comment.author_name}
           text={comment.text} date={comment.date}/>
