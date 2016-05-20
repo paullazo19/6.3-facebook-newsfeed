@@ -1,0 +1,239 @@
+.grid__row {
+  font-size: 0; }
+
+.grid__col--1 {
+  display: inline-block;
+  width: 8.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--2 {
+  display: inline-block;
+  width: 16.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--3 {
+  display: inline-block;
+  width: 25%;
+  font-size: 1.4rem; }
+
+.grid__col--4 {
+  display: inline-block;
+  width: 33.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--5 {
+  display: inline-block;
+  width: 41.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--6 {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.4rem; }
+
+.grid__col--7 {
+  display: inline-block;
+  width: 58.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--8 {
+  display: inline-block;
+  width: 66.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--9 {
+  display: inline-block;
+  width: 75%;
+  font-size: 1.4rem; }
+
+.grid__col--10 {
+  display: inline-block;
+  width: 83.33333%;
+  font-size: 1.4rem; }
+
+.grid__col--11 {
+  display: inline-block;
+  width: 91.66667%;
+  font-size: 1.4rem; }
+
+.grid__col--12 {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.4rem; }
+
+* {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", sans-serif;
+  padding: 0;
+  margin: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-size: 0;
+  background-color: #c8c8c8; }
+
+.wrapper {
+  background-color: white;
+  font-size: 1rem;
+  margin: 0 auto;
+  width: 90%; }
+
+button {
+  font-size: 1rem; }
+
+.author__image {
+  width: 5rem;
+  margin-bottom: 1rem; }
+
+.article__header {
+  display: inline-block;
+  margin-left: 1rem;
+  vertical-align: top; }
+
+.author__name {
+  color: #3b5998;
+  font-size: 1.5rem;
+  padding-bottom: 0.25rem;
+  text-transform: capitalize; }
+
+.article {
+  border-bottom: 1px solid #c8c8c8;
+  margin-top: 1rem;
+  padding: 1rem; }
+
+.article__date {
+  color: #969696;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: capitalize; }
+
+.article__text {
+  font-size: 1.5rem;
+  padding-bottom: 1rem; }
+
+.article__footer {
+  font-size: 1.5rem; }
+
+.article__footer--link {
+  color: #3b5998;
+  text-decoration: none; }
+
+.article__buttons {
+  border-bottom: 1px solid #c8c8c8; }
+
+.comment__button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 3rem;
+  outline: none; }
+
+.comment__button:active {
+  outline: none;
+  border: none; }
+
+.comment__button:focus {
+  outline: none; }
+
+.gray {
+  color: #969696;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  text-decoration: none; }
+
+.grayComment {
+  color: #969696; }
+
+.blue {
+  color: #3b5998;
+  background-color: white;
+  cursor: pointer;
+  font-weight: 600;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  text-decoration: none; }
+
+.green {
+  color: green; }
+
+.like_counter {
+  font-size: 1rem;
+  font-weight: 500; }
+
+.comments__section {
+  background-color: #e6e6e6;
+  padding: 1rem; }
+
+.top_comments {
+  color: #3b5998;
+  font-weight: 700;
+  float: right;
+  text-transform: capitalize;
+  vertical-align: top; }
+
+.comments__header {
+  padding: 1rem;
+  background-color: #e6e6e6;
+  border-bottom: 1px solid #c8c8c8; }
+
+.comment__img {
+  width: 5rem; }
+
+.comment__name {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-right: 0.25rem;
+  text-transform: capitalize; }
+
+.comment__text {
+  display: inline-block;
+  font-size: 1.25rem; }
+
+.comment__content {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  width: 85%;
+  vertical-align: top; }
+
+.comment__date {
+  color: #969696; }
+
+.comments__viewMore {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #e6e6e6;
+  border: none;
+  color: #3b5998;
+  cursor: pointer;
+  outline: none; }
+
+.comments__viewMore:active {
+  outline: none;
+  border: none; }
+
+.comment__viewMore:focus {
+  outline: none; }
+
+.comment__viewable {
+  display: block; }
+
+.comment__hidden {
+  display: none; }
+
+/*# sourceMappingURL=main.css.map */
